@@ -1,0 +1,32 @@
+-- SQL Practical 2: DDL Commands
+-- DDL stands for Data Definition Language
+
+CREATE DATABASE CollegeDB;
+USE CollegeDB;
+
+-- 1. Create a table
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50),
+    course VARCHAR(30),
+    marks INT
+);
+
+-- 2. Add a new column
+ALTER TABLE Students
+ADD email VARCHAR(100);
+
+-- 3. Change a column's data type
+ALTER TABLE Students
+MODIFY student_name VARCHAR(100);
+
+-- 4. Remove a column
+ALTER TABLE Students
+DROP COLUMN email;
+
+-- 5. View the table structure
+DESCRIBE Students;
+
+-- 6. Delete the table structure
+-- Uncomment the next line only when you want to delete the table
+-- DROP TABLE Students;
